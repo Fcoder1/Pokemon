@@ -60,6 +60,10 @@ public class Location {
         while (!Party.checkIfEveryPkmHasFainted()) {
             Sound.playMusicOnLoop("music/creditsTheme.mp3");
             Graphics.printMap();
+            System.out.println("Cities: [P]allet [V]iridian [W]Pewter [C]erulean [M]Vermillion [L]avender");
+            System.out.println("        [S]affron [F]uchsia [I]Cinnabar [T]Indigo Plateau [R]ocketopolis");
+            System.out.println("        [D]Celadon City  [G]Vaughan District");
+            System.out.println("Routes: enter a number 1-25   |   [B] Back");
             System.out.println("Where would you like to go?");
 
             String choiceMap = sc1.nextLine().trim().toUpperCase();

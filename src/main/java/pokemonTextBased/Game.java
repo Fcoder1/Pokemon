@@ -161,6 +161,17 @@ public class Game {
         Thread.sleep(openingWaitTime);
         System.out.println("And stay out of Rocketopolis!\n");
         Thread.sleep(openingWaitTime);
+        System.out.println("Oh, and one more thing — let me show you how to get around.\n");
+        Thread.sleep(openingWaitTime);
+        System.out.println("Open the Map from the Play Menu with [M]. Use letter keys to travel to cities,");
+        System.out.println("or type a route number (1-25) to explore routes and find wild Pokemon.\n");
+        Thread.sleep(openingWaitTime);
+        System.out.println("Inside a city you'll find a Pokemon Center (free healing!), a Pokemart,");
+        System.out.println("and a Gym. Defeat gym leaders to earn Badges and raise your level cap.\n");
+        Thread.sleep(openingWaitTime);
+        System.out.println("In battle, press [F] Fight, [B] Bag, [S] Switch Pokemon, or [R] Run.");
+        System.out.println("You can also press [H] How to Play in the Play Menu anytime for a full guide.\n");
+        Thread.sleep(openingWaitTime);
         pressEnterToContinue(sc1);
         Sound.stopAllSounds();
         Graphics.printLoadingBar(120);
@@ -283,9 +294,9 @@ public class Game {
         while (true) {
             Sound.playMusicOnLoop("music/titleMusic.mp3");
             Graphics.printPlayer(true);
-            System.out.println("==========================================================================");
-            System.out.println("| [M] Open Map | [V] View Badges | [O] Options | [R] Return to Main Menu |");
-            System.out.println("--------------------------------------------------------------------------");
+            System.out.println("====================================================================================");
+            System.out.println("| [M] Open Map | [V] View Badges | [H] How to Play | [O] Options | [R] Return     |");
+            System.out.println("------------------------------------------------------------------------------------");
             String choicePlayMenu = sc1.nextLine().trim().toUpperCase();
             switch (choicePlayMenu) {
                 case "M":
@@ -293,6 +304,9 @@ public class Game {
                     break;
                 case "V":
                     Location.viewBadges(sc1);
+                    break;
+                case "H":
+                    Tutorial.showHowToPlay(sc1);
                     break;
                 case "O":
                     Location.openOptionsMenu(sc1);
