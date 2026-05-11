@@ -156,6 +156,9 @@ public class SaveSys {
         data.areasReached = toStringMap(User.areasReached);
         data.pokemonRegisteredInPokedex = new ArrayList<>(User.pokemonRegisteredInPokedex);
 
+        // Tutorial flags
+        data.hasSeenBattleTutorial = User.hasSeenBattleTutorial;
+
         String fileName = SAVE_FILE_PREFIX + slot + SAVE_FILE_SUFFIX;
 
         try (FileWriter writer = new FileWriter(fileName)) {
@@ -204,6 +207,9 @@ public class SaveSys {
             User.routesReached = data.routesReached;
             User.areasReached = fromStringMap(data.areasReached, Location.Area.class);
             User.pokemonRegisteredInPokedex = new ArrayList<>(data.pokemonRegisteredInPokedex);
+
+            // Tutorial flags (null-safe for older saves that lack this field)
+            User.hasSeenBattleTutorial = data.hasSeenBattleTutorial != null ? data.hasSeenBattleTutorial : false;
 
             System.out.println("Game loaded from slot " + slot + ".");
         } catch (IOException e) {
