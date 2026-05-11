@@ -29,7 +29,7 @@ public class Tutorial {
             "Battles are turn-based. On your turn you choose one action:",
             "",
             "  [F] Fight  — Pick one of your Pokemon's moves (1-4).",
-            "  [B] Bag    — Use a Potion, Pokeball, or other item.",
+            System.out.println("  [B] Bag    — Use a Potion, Pokeball, or other item.");
             "  [S] Switch — Send out a different Pokemon from your party.",
             "  [I] Info   — View AI engine analysis and match-up ratings.",
             "  [R] Run    — Flee (wild battles only).",

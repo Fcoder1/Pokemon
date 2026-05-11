@@ -208,8 +208,8 @@ public class SaveSys {
             User.areasReached = fromStringMap(data.areasReached, Location.Area.class);
             User.pokemonRegisteredInPokedex = new ArrayList<>(data.pokemonRegisteredInPokedex);
 
-            // Tutorial flags (null-safe for older saves)
-            User.hasSeenBattleTutorial = data.hasSeenBattleTutorial;
+            // Tutorial flags (null-safe for older saves that lack this field)
+            User.hasSeenBattleTutorial = data.hasSeenBattleTutorial != null ? data.hasSeenBattleTutorial : false;
 
             System.out.println("Game loaded from slot " + slot + ".");
         } catch (IOException e) {

@@ -33,5 +33,5 @@ public class SaveData {
     public List<String> pokemonRegisteredInPokedex;
 
     // Tutorial flags
-    public boolean hasSeenBattleTutorial;
+    public Boolean hasSeenBattleTutorial;
 }

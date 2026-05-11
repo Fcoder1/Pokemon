@@ -934,7 +934,7 @@ public class Encounter {
         System.out.println("  *** BATTLE CONTROLS (shown once) ***");
         System.out.println("=".repeat(60));
         System.out.println("  [F] Fight     — Choose a move to attack");
-        System.out.println("  [B] Bag       — Use an item (Potion, Pokéball, etc.)");
+        System.out.println("  [B] Bag       — Use an item (Potion, Pokeball, etc.)");
         System.out.println("  [S] Switch    — Swap your active Pokemon");
         System.out.println("  [I] Info      — View match-up & move ratings (AI engine)");
         System.out.println("  [R] Run       — Flee from a wild Pokemon battle");
