@@ -31,4 +31,7 @@ public class SaveData {
     public Map<Integer, Boolean> routesReached;
     public Map<String, Boolean> areasReached;
     public List<String> pokemonRegisteredInPokedex;
+
+    // Tutorial flags
+    public Boolean hasSeenBattleTutorial;
 }

@@ -720,6 +720,7 @@ public class Encounter {
         Party.smushParty();
     }
     public static void playWildPkmBattle(Arena arena, Scanner sc1) throws InterruptedException, ExecutionException{
+        showBattleTutorialIfNeeded(sc1);
         boolean wildPkmIsCaught = arena.isCaught;
         boolean playerHasRunAway = false;
         boolean playerSwitched = false;
@@ -925,6 +926,23 @@ public class Encounter {
         if (choice.matches("[FBSIR]")) return choice;
         System.out.println("Invalid input.");
         return "-1";
+    }
+    public static void showBattleTutorialIfNeeded(Scanner sc1) {
+        if (User.hasSeenBattleTutorial) return;
+        User.hasSeenBattleTutorial = true;
+        System.out.println("=".repeat(60));
+        System.out.println("  *** BATTLE CONTROLS (shown once) ***");
+        System.out.println("=".repeat(60));
+        System.out.println("  [F] Fight     — Choose a move to attack");
+        System.out.println("  [B] Bag       — Use an item (Potion, Pokeball, etc.)");
+        System.out.println("  [S] Switch    — Swap your active Pokemon");
+        System.out.println("  [I] Info      — View match-up & move ratings (AI engine)");
+        System.out.println("  [R] Run       — Flee from a wild Pokemon battle");
+        System.out.println("-".repeat(60));
+        System.out.println("  In the move list:");
+        System.out.println("  [1-4] Select move   [B] Back to action menu");
+        System.out.println("=".repeat(60));
+        Game.pressEnterToContinue(sc1);
     }
     public static void handleStatusConditionsAtBeginningOfTurn(Arena arena) throws InterruptedException {
         if(arena.p[0].getStatusCondition().equalsIgnoreCase("Sleep") && (arena.p[0].getWakeUpTurn() <= arena.turnNum || Math.random() < .33)){
@@ -1192,6 +1210,7 @@ public class Encounter {
         return playerHasWon;
     }
     public static boolean playTrainerBattle(Arena arena, Scanner sc1) throws InterruptedException, ExecutionException {
+        showBattleTutorialIfNeeded(sc1);
         Graphics.printPokemon(arena.fp[0].getName(), false, arena.fp[0].isShiny());
         System.out.println(arena.trainer.name + " sent out " + arena.fp[0].getName() + "!");
         Sound.exitBall(arena.fp[0]);
