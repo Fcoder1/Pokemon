@@ -172,6 +172,7 @@ public class Game {
         System.out.println("In battle, press [F] Fight, [B] Bag, [S] Switch Pokemon, or [R] Run.");
         System.out.println("You can also press [H] How to Play in the Play Menu anytime for a full guide.\n");
         Thread.sleep(openingWaitTime);
+        Tutorial.playTutorialBattle(sc1);
         pressEnterToContinue(sc1);
         Sound.stopAllSounds();
         Graphics.printLoadingBar(120);

@@ -12,6 +12,7 @@ import java.util.HashMap;
 
 public class Sound {
     public static boolean disableSound = false;
+    public static double musicVolume = 0.5; // background music volume (0.0 - 1.0)
 
     private static final HashMap<String, Clip> clips = new HashMap<>();
     private static final HashMap<String, MediaPlayer> mediaPlayers = new HashMap<>();
@@ -132,6 +133,7 @@ public class Sound {
                 });
             }
 
+            mediaPlayer.setVolume(musicVolume);
             mediaPlayer.play();
             mediaPlayers.put(resourcePath, mediaPlayer);
         } catch (Exception e) {
