@@ -90,6 +90,13 @@ public class NPC {
                 "You haven't been in Rocketopolis, have you?",
                 "Call me sometimes!");
 
+        Character.MOM.setDialogue(3,
+                "Three badges! You're getting so strong!",
+                "I bumped into Professor Oak at the market — he said he's very proud of you.",
+                "Please be careful on those routes. I worry every night.",
+                "Have you been eating properly out there?",
+                "The neighbors say they've seen you on TV!");
+
         Character.MOM.setDialogue(4,
                 "Four badges, you're really on your way to becoming Champion!",
                 "The neighbors won't stop asking about you!",
@@ -140,7 +147,31 @@ public class NPC {
                 "Red, whom you know is from Pallet Town too, already filled it out for you!");
         Character.PROFESSOR.setDialogue(2,
                 "You're becoming such an amazing Pokemon trainer.",
-                "I see you've been making good use of your Pokedex");
+                "I see you've been making good use of your Pokedex.");
+        Character.PROFESSOR.setDialogue(3,
+                "Three badges already — you're making Professor Oak proud!",
+                "Keep leveling up your Pokemon and they'll evolve into powerful forms.",
+                "Have you explored all the routes near Cerulean City?");
+        Character.PROFESSOR.setDialogue(4,
+                "Four badges! You're halfway to the Pokemon League.",
+                "The Pokemon world is full of surprises — never stop exploring!",
+                "I hear things are getting tense in Rocketopolis. Be careful.");
+        Character.PROFESSOR.setDialogue(5,
+                "Five badges? You're one of the most promising trainers I've seen!",
+                "Your Pokedex entries are really filling up nicely.",
+                "Have you visited Silph Co. in Saffron City yet?");
+        Character.PROFESSOR.setDialogue(6,
+                "Six badges! The Elite Four won't know what hit them.",
+                "I've been publishing research based on the Pokemon you've encountered.",
+                "Your journey has contributed so much to science. Thank you!");
+        Character.PROFESSOR.setDialogue(7,
+                "Seven badges — you're nearly at the Pokemon League!",
+                "I hope you've been keeping your Pokemon healthy at the Centers.",
+                "Whatever happens next, know that I'm very proud of you.");
+        Character.PROFESSOR.setDialogue(8,
+                "Eight badges! Are you ready for the Elite Four?",
+                "Your Pokemon are incredibly strong. Trust in them!",
+                "This is everything I hoped for when I gave you that Pokedex.");
         Character.PROFESSOR.setDialogue(10,
                 "Why?",
                 "What made you do that to Vaughan?",
@@ -256,11 +287,47 @@ public class NPC {
                 "You remind me of a young trainer named Red! He came through this gym a couple years back.",
                 "Good luck on your journey!"
         );
+        Character.MISTY.setDialogue(1,
+                "One badge — great start!",
+                "The ocean around Cerulean is so beautiful. I hope it stays that way.",
+                "Brock's gym in Pewter City is a great challenge. Did you enjoy it?",
+                "Good luck on your journey!"
+        );
+        Character.MISTY.setDialogue(2,
+                "Two badges? You're doing great!",
+                "Water Pokemon are my specialty — never underestimate a Starmie!",
+                "Keep an eye on Mayor Vaughan. Something feels off about him.",
+                "Red once told me he trained on Route 24 — worth checking out!"
+        );
+        Character.MISTY.setDialogue(3,
+                "Three badges, not bad at all!",
+                "I've been hearing rumors about Team Rocket moving into Lavender Town...",
+                "Make sure your Pokemon are well-rested before big battles.",
+                "You definitely remind me more of Red every time I see you!"
+        );
+        Character.MISTY.setDialogue(4,
+                "Four badges! You're halfway there!",
+                "I've started cleaning up the ocean near Vermilion. It's a lot of work.",
+                "Don't let Vaughan's people push you around.",
+                "Come back anytime — always good to see a strong trainer!"
+        );
+        Character.MISTY.setDialogue(5,
+                "Five badges! You're really something special.",
+                "The water quality near Fuchsia has been declining...",
+                "I may need your help one day. Keep getting stronger!",
+                "You and Red would have made a great team, I think."
+        );
         Character.MISTY.setDialogue(6,
                 "You're pretty tough!",
                 "Mayor Vaughan's new climate stance keeps polluting the water. It's getting bad!",
                 "You still remind me of Red!",
                 "I think you'll be a champion, just like him!"
+        );
+        Character.MISTY.setDialogue(7,
+                "Seven badges — almost there!",
+                "Please, when you become champion, do something about the pollution!",
+                "I've never seen anyone improve this fast. You're incredible!",
+                "The whole region is watching you now."
         );
         Character.MISTY.setDialogue(8,
                 "What are you waiting for!? Become the CHAMPION!",
@@ -408,11 +475,29 @@ public class NPC {
                 "... Do you know Red?",
                 "... Really, oh, you're from Pallet Town? That's pretty far."
         );
+        Character.SABRINA.setDialogue(2,
+                "You're picking up badges fast!",
+                "My gym is open whenever you're ready for a challenge.",
+                "Psychic types can be tricky — don't say I didn't warn you.",
+                "... Red used to visit sometimes. Do you know him?"
+        );
         Character.SABRINA.setDialogue(4,
                 "Hey! What's up?",
                 "You're really improving as trainer!",
                 "Visit me whenever you want!",
                 "... Red has never mentioned me, has he?"
+        );
+        Character.SABRINA.setDialogue(6,
+                "Six badges! You're getting really strong.",
+                "I sense something big coming — for you, and for all of Kanto.",
+                "My Psychic powers don't lie... be careful.",
+                "... Red still hasn't visited."
+        );
+        Character.SABRINA.setDialogue(8,
+                "Eight badges! This is it — the Elite Four!",
+                "I believe in you. My Alakazam told me so.",
+                "Come visit the night club to celebrate after you win!",
+                "... Tell Red hi if you see him."
         );
         Character.SABRINA.setDialogue(9,
                 "Hey Champ!",

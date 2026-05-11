@@ -1,6 +1,7 @@
 package pokemonTextBased;
 
 import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 public class Tutorial {
 
@@ -29,7 +30,7 @@ public class Tutorial {
             "Battles are turn-based. On your turn you choose one action:",
             "",
             "  [F] Fight  — Pick one of your Pokemon's moves (1-4).",
-            System.out.println("  [B] Bag    — Use a Potion, Pokeball, or other item.");
+            "  [B] Bag    — Use a Potion, Pokeball, or other item.",
             "  [S] Switch — Send out a different Pokemon from your party.",
             "  [I] Info   — View AI engine analysis and match-up ratings.",
             "  [R] Run    — Flee (wild battles only).",
@@ -107,5 +108,40 @@ public class Tutorial {
                 sc1.nextLine();
             }
         }
+    }
+
+    public static void playTutorialBattle(Scanner sc1) throws InterruptedException, ExecutionException {
+        if (User.hasSeenTutorialBattle) return;
+        User.hasSeenTutorialBattle = true;
+        // We've already explained controls, so skip the in-battle tutorial banner
+        User.hasSeenBattleTutorial = true;
+
+        System.out.println(DIVIDER);
+        System.out.println("  PROFESSOR OAK: Before you head off, let's do a quick practice battle!");
+        System.out.println("  A wild Rattata has wandered into the lab — perfect for training.");
+        System.out.println(DIVIDER);
+        Thread.sleep((long) (User.textSpeed * 0.75));
+
+        System.out.println("  In battle you have five options:");
+        System.out.println("  [F] Fight  — Select a move and attack. Try pressing [F] then [1].");
+        System.out.println("  [B] Bag    — Open your bag to use a Potion or throw a Pokeball.");
+        System.out.println("  [S] Switch — Swap to a different Pokemon in your party.");
+        System.out.println("  [I] Info   — View AI battle analysis and match-up ratings.");
+        System.out.println("  [R] Run    — Flee from a wild battle at any time.");
+        System.out.println(THIN);
+        System.out.println("  Tip: Try [I] Info during the battle to see move ratings.");
+        System.out.println("  Tip: Try [R] Run when you want to escape — no penalty in the wild!");
+        System.out.println(DIVIDER);
+        Game.pressEnterToContinue(sc1);
+
+        Pokemon rattata = new Pokemon(Species.getSpecies("Rattata"), 3, false);
+        Encounter.enterWildPkmBattle(rattata, sc1);
+
+        System.out.println(DIVIDER);
+        System.out.println("  PROFESSOR OAK: Excellent work! You're ready for your journey.");
+        System.out.println("  Remember, you can read the full guide any time with [H] in the Play Menu.");
+        System.out.println(DIVIDER);
+        Thread.sleep((long) (User.textSpeed * 0.5));
+        Game.pressEnterToContinue(sc1);
     }
 }

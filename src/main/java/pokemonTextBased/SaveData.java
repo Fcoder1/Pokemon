@@ -34,4 +34,5 @@ public class SaveData {
 
     // Tutorial flags
     public Boolean hasSeenBattleTutorial;
+    public Boolean hasSeenTutorialBattle;
 }

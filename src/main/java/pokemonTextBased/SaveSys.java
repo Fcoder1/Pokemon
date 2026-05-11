@@ -158,6 +158,7 @@ public class SaveSys {
 
         // Tutorial flags
         data.hasSeenBattleTutorial = User.hasSeenBattleTutorial;
+        data.hasSeenTutorialBattle = User.hasSeenTutorialBattle;
 
         String fileName = SAVE_FILE_PREFIX + slot + SAVE_FILE_SUFFIX;
 
@@ -210,6 +211,7 @@ public class SaveSys {
 
             // Tutorial flags (null-safe for older saves that lack this field)
             User.hasSeenBattleTutorial = data.hasSeenBattleTutorial != null ? data.hasSeenBattleTutorial : false;
+            User.hasSeenTutorialBattle = data.hasSeenTutorialBattle != null ? data.hasSeenTutorialBattle : false;
 
             System.out.println("Game loaded from slot " + slot + ".");
         } catch (IOException e) {

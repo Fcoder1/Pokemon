@@ -50,6 +50,7 @@ public class User {
     public static Hints hintMode = Hints.SHOW_ENGINE_CHOICES;
     //tutorial flags
     public static boolean hasSeenBattleTutorial = false;
+    public static boolean hasSeenTutorialBattle = false;
     //progression
     public static int reputation = 0;
     public static int recordColosseumTrainersBeaten = 0;
