@@ -1,0 +1,13 @@
+out*/
+!**/**/out/
+!**/src/test/**/out/
+target*
+.idea*/
+
+dependency-reduced-pom.xml
+
+.vscode/
+
+.DS_Store
+
+saves/*.json
