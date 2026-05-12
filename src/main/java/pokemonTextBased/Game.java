@@ -60,7 +60,7 @@ public class Game {
     }
 
     //cutscenes
-    public static void playOpening(Scanner sc1) throws InterruptedException {
+    public static void playOpening(Scanner sc1) throws InterruptedException, ExecutionException {
         Graphics.printSmallTitleImage();
         Graphics.printLoadingBar(60);
         Sound.stopAllSounds();
