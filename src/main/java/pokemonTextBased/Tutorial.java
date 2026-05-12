@@ -223,7 +223,7 @@ public class Tutorial {
                 System.out.println("  Go to any city on the map and press [M] to enter the Pokemart.");
                 System.out.println("  Cities with Pokemarts: Viridian, Pewter, Cerulean, Vermilion,");
                 System.out.println("  Lavender, Celadon, Saffron, Fuchsia, Cinnabar, and more.");
-            } else if (matchesAny(query, "pokedex", "dex", "pokedex")) {
+            } else if (matchesAny(query, "pokedex", "dex")) {
                 System.out.println("  HOW TO VIEW THE POKEDEX");
                 System.out.println(THIN);
                 System.out.println("  [O] Options → [P] Pokedex.");
